@@ -70,17 +70,17 @@ chmod +x make_distrib.sh
 cd ..
 
 #Perform code signing
-cd binary_distrib/macosx64
-if [ $# -gt 4 ]
-  then
-    chmod +x $WORK_DIR/macosx_codesign.sh
-    bash $WORK_DIR/macosx_codesign.sh $(pwd) "$5" $6 $7 $8 $9
-    retVal=$?
-    if [ $retVal -ne 0 ]; then
-        echo "Binaries are not correctly signed"
-        exit 1
-    fi
-fi
+#cd binary_distrib/macosx64
+#if [ $# -gt 4 ]
+#  then
+#    chmod +x $WORK_DIR/macosx_codesign.sh
+#    bash $WORK_DIR/macosx_codesign.sh $(pwd) "$5" $6 $7 $8 $9
+#    retVal=$?
+#    if [ $retVal -ne 0 ]; then
+#        echo "Binaries are not correctly signed"
+#        exit 1
+#    fi
+#fi
 
 #Pack binary_distrib
 rm -rf ../../../out
@@ -88,5 +88,5 @@ mkdir ../../../out
 tar -czvf ../../../out/binary_distrib.tar.gz *
 
 #Pack javadoc
-cd docs
-tar -czvf ../../../../out/javadoc.tar.gz *
+#cd docs
+#tar -czvf ../../../../out/javadoc.tar.gz *
