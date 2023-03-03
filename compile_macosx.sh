@@ -70,7 +70,7 @@ chmod +x make_distrib.sh
 cd ..
 
 #Perform code signing
-#cd binary_distrib/macosx64
+cd binary_distrib/macosx64
 #if [ $# -gt 4 ]
 #  then
 #    chmod +x $WORK_DIR/macosx_codesign.sh
